@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+<body>
+    <div class="loginbox">
+    <img src="icon.jpg" class="icon" >
+        <h1>CAI PENG Login Page</h1>
+        <form> 
+            <p>Username</p>
+            <input type="text" id= "username" name="" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" id="password" name="" placeholder="Enter Password">
+            <p>Select Role</p>
+            <select name="role" id="role">
+                <option value="sysAdmin">System Admin</option>
+                <option value="owner">Cafe Owner</option>
+                <option value="manager">Cafe Manager</option>
+                <option value="staff">Cafe Staff</option>
+            </select>
+            <input type="submit" id="login" value="Login" onclick="onClick()"><br>
+        </form>
+    </div>
+
+    <script>
+        function onClick() {
+            if (checkFields() === false) {
+                alert("Fill in Username and Password");
+            } 
+            else {
+                getRole();
+            }
+        }
+
+        function checkFields() { <!-- this function validates that username and password fields are not empty -->
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username == "" || password == "")
+                return false;
+            else 
+                return true;
+        }
+
+        function getRole() {
+            var role = document.getElementById("role").value;
+            if (role == "sysAdmin") {
+                window.location.href="account.html";
+            }
+            else if (role == "owner") {
+                window.location.href="account.html";
+            }
+            else if (role == "manager") {
+                window.location.href="account.html";
+            }
+            else if (role == "staff") {
+                window.location.href="account.html";
+            }
+        }
+    </script>
+</body>
+</head>
+</html>

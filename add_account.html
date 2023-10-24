@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>New Account Page</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+<style> 
+    #new_account_header {
+        padding:20px;
+        margin-top:50px;
+        margin-left: 465px;
+        width: 350px;
+        height: 70px;
+        background-color: hsla(19, 87%, 9%, 0.936);
+        color:blanchedalmond;
+        text-align: center;
+    }
+
+    #new_account_container {
+        padding: 50px;
+        margin: 0 auto;
+        width: 350px;
+        height: 350px;
+        background-color: blanchedalmond;
+        color: hsla(19, 87%, 9%, 0.936);
+    }
+
+    #new_account_container label{
+        color:hsla(19, 87%, 9%, 0.936);
+        font-weight: bold;
+        font-size:17px;
+    }
+
+    #new_account_container input{
+        color:hsla(19, 87%, 9%, 0.936);
+        font-weight: bold;
+        background-color: burlywood;
+    }
+
+    #new_account_container select{
+        color:hsla(19, 87%, 9%, 0.936);
+        font-weight: bold;
+        background-color: burlywood;
+    }
+</style>
+<body>
+    <nav>
+        <div class = "div left-nav">
+            <h2>CaiPeng</h2>
+        </div>
+        <div class = "right-nav">
+            <img src = "icon.jpg" class = "icon">
+        </div>
+    </nav>
+
+    <div id="new_account_header">
+        <h1>NEW ACCOUNT</h1>
+    </div>
+
+    <div id="new_account_container">
+        <form id="account_details">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="age">Age</label><br>
+            <input type="text" id="age" name="age" required><br><br>
+            <label for="staff_role">Staff Role</label><br>
+            <select name="staff_role" id="staff_role">
+                <option value="chef">Chef</option>
+                <option value="barista">Barista</option>
+                <option value="ka">Kitchen Assistant</option>
+                <option value="waiter">Waiter</option>
+            </select><br><br>
+            <label for="password">Password</label><br>
+            <input type="text" id="password" name="password"><br><br>
+            <input type="button" id="submit" name="submit" value="Add Account" onclick="location.href='account.html';">
+            <input type="reset" id="reset" name="reset">
+        </form>
+    </div>
+</body>
+</head>
+</html>
